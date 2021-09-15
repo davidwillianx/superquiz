@@ -8,6 +8,9 @@ spring:
     config:
       server:
         git:
-          uri: file://${user.home}/Developer/projects/java/super-quiz/configserver/src/main/resources/configs
+          uri: ${GIT_REPO:https://github.com/davidwillianx/superquiz}
+          searchPaths: ${GIT_PATH:configserver/src/main/resourses/configs/**}
+          clone-on-start: true
+
 
 
