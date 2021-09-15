@@ -3,7 +3,6 @@ server:
 spring:
   application:
     name: GLOBALCONFIGS
-
   cloud:
     config:
       server:
@@ -11,4 +10,10 @@ spring:
           uri: ${GIT_REPO:https://github.com/davidwillianx/superquiz-configs}
           clone-on-start: true
 
-
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_API:http://localhost:9191/eureka}
+  instance:
+    prefer-ip-address: true
+    hostname: localhost
