@@ -1,0 +1,13 @@
+server:
+  port: 9292
+
+spring:
+  application:
+    name: qgateway
+  cloud:
+    gateway:
+      routes:
+        - id: qoauth
+          uri: lb://QOAUTH
+          predicates:
+            - Path=/qoauth/**

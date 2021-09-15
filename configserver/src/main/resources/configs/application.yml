@@ -1,0 +1,7 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: ${EUREKA_API:http://localhost:9191/eureka}
+  instance:
+    prefer-ip-address: true
+    hostname: localhost

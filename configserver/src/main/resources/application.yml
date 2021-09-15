@@ -1,0 +1,13 @@
+server:
+  port: 9494
+spring:
+  application:
+    name: GLOBALCONFIGS
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: file://${user.home}/Developer/projects/java/super-quiz/configserver/src/main/resources/configs
+
+

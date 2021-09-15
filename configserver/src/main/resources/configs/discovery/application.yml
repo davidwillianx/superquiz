@@ -1,0 +1,10 @@
+server:
+  port: 9191
+spring:
+  application:
+    name: qdiscovery
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false

@@ -1,0 +1,12 @@
+server:
+  port: 9393
+
+spring:
+  application:
+    name: QAUTH
+
+keycloak:
+  auth-server-url: http://localhost:8180/auth
+  realm: superquiz
+  resource: login-app
+  principal-attribute: prefered_username
