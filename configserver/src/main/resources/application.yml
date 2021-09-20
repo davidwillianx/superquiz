@@ -2,18 +2,19 @@ server:
   port: 9494
 spring:
   application:
-    name: GLOBALCONFIGS
+    name: globalconfigs
   cloud:
     config:
       server:
         git:
           uri: ${GIT_REPO:https://github.com/davidwillianx/superquiz-configs}
+          search-paths:
+            - '{application}/{profile}'
+            - qauth
+            - discovery
+            - gateway
           clone-on-start: true
-
 eureka:
   client:
     service-url:
-      defaultZone: ${EUREKA_API:http://localhost:9191/eureka}
-  instance:
-    prefer-ip-address: true
-    hostname: localhost
+      defaultZone: ${DISCOVRY_PATH:http://localhost:9191/eureka}

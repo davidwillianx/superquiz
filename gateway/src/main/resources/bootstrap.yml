@@ -1,4 +1,9 @@
 spring:
+  application:
+    name: gateway
+  profiles:
+    default: default
+    active: default
   cloud:
     config:
       enabled: true

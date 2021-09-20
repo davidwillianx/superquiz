@@ -1,7 +1,10 @@
 spring:
+  application:
+    name: discovery
+  profiles:
+    default: default
+    active: default
   cloud:
     config:
       enabled: true
       uri: http://localhost:9494
-  profiles:
-    active: default
